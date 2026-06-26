@@ -1,8 +1,166 @@
-*{
-    padding: 0;
+* {
     margin: 0;
 }
 
-header, nav{
-    border: solid;
+header {
+    background-color: yellow;
+
+    h1 {
+        text-align: center;
+        margin: 0;
+    }
+
+    & div {
+        height: 200px;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+}
+
+nav {
+    background-color: hotpink;
+    position: sticky;
+    top: 0;
+
+    & ul {
+        display: flex;
+        justify-content: space-around;
+        list-style: none;
+        padding: 15px;
+
+        li {
+            border: 2px solid;
+            border-radius: 10px;
+            padding: 6px;
+        }
+
+        & a {
+            text-decoration: none;
+            color: black;
+        }
+    }
+}
+
+main {
+    border: blue solid;
+
+    & #turmas {
+
+        & h2 {
+            padding: 20px 5px;
+            color: red;
+            text-align: center;
+        }
+
+        & .grid-turmas {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            gap: 10px;
+            text-align: center;
+
+            & .grid-item-turmas:last-child {
+                grid-column: 1/3;
+            }
+        }
+    }
+
+    & #metodologia {
+        text-align: center;
+
+        h2 {
+            color: red;
+            padding: 20px 5px;
+        }
+
+        & .grid-metodologia {
+            display: grid;
+            grid-template: 1fr 1fr / 1fr 1fr;
+            gap: 10px;
+
+            & .grid-item-metodologia:last-child {
+                grid-column: 1/3;
+            }
+        }
+    }
+
+    & #nosso-time {
+
+        & h2 {
+            color: red;
+            text-align: center;
+            padding: 20px 5px;
+        }
+
+        & .grid-time {
+            border: solid;
+            display: grid;
+            grid-template: 1fr / 1fr 1fr 1fr;
+            justify-content: center;
+            gap: 20px;
+
+            & .grid-item-time {
+
+                & img {
+                    border-radius: 50%;
+                }
+
+                & h3,
+                p {
+                    text-align: center;
+                    margin: 5px;
+                }
+
+            }
+        }
+    }
+
+    & #eventos {
+        color: red;
+        text-align: center;
+
+        & h3 {
+            padding: 20px 5px;
+        }
+    }
+}
+
+article {
+    border: pink solid;
+}
+
+aside {
+    text-align: center;
+    border: purple solid;
+    
+    & h2{
+        padding: 20px 5px;
+
+    }
+
+    & table{
+        justify-self: center;
+    }
+
+}
+
+footer {
+    & h2{
+        padding: 20px 5px;
+    }
+    border: green solid;
+    text-align: center;
+    
+    & .grid-contatos{
+        display: grid;
+        grid-template: 1fr 1fr / 1fr 1fr 1fr;
+
+        & .grid-item-contatos:last-child{
+            grid-column: 1/4;
+        }
+    }
 }
